@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { CustomAlert } from '../../components/Utils/Alert';
 import './style.css';
 
@@ -18,24 +18,24 @@ export const Picture = (props) => {
     const videoRef = useRef(null);
     const photoRef = useRef(null);
 
-    useEffect(() => {
-        if (navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            || navigator.userAgent.match(/BlackBerry/i)
-            || navigator.userAgent.match(/Windows Phone/i)) {
-            setSelected('user');
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (navigator.userAgent.match(/Android/i)
+    //         || navigator.userAgent.match(/webOS/i)
+    //         || navigator.userAgent.match(/iPhone/i)
+    //         || navigator.userAgent.match(/iPad/i)
+    //         || navigator.userAgent.match(/iPod/i)
+    //         || navigator.userAgent.match(/BlackBerry/i)
+    //         || navigator.userAgent.match(/Windows Phone/i)) {
+    //         setSelected('user');
+    //     }
+    // }, []);
 
     const getVideo = async () => {
         navigator.mediaDevices
             .getUserMedia({
                 video: {
                     facingMode: {
-                        ideal: selected
+                        selected
                     },
                     width: 1920,
                     height: 1080
@@ -107,9 +107,7 @@ export const Picture = (props) => {
                 {
                     resultingPhoto &&
                     <div className=''>
-                        {selected === 'environment' ?
-                            <h4>Please, right click to download the image</h4> :
-                            <h4>Please, press and hold to download the image</h4>}
+                        <h4>Please, press and hold or right click to download the image</h4>
                         <img className='image_taken' src={resultingPhoto} alt='image taken' />
                     </div>
                 }
