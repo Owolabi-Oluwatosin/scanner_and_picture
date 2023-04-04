@@ -1,0 +1,48 @@
+.camera{
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.image_taken{
+    max-width: 300px;
+}
+
+.camera video{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.new-canvas-property{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.canvas-property{
+    display: none;
+}
+
+.snap-btn, .refresh-btn{
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10%;
+    border: none;
+    appearance: none;
+    outline: none;
+    background-color: #074c00;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: 1s;
+}
+
+.snap-btn:hover, .refresh-btn:hover{
+    background-color: #31da1f;
+}
+
+.alert{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+
+.webcam-scan{
+    width: 300px;
+    margin: 40px auto;
+}
+
+.webcam-scan-result{
+    width: 400px;
+    margin: 40px auto;
+}
+
+.alert{
+    margin-bottom: 20px;
+}
