@@ -56,7 +56,7 @@ export const Scan = (props) => {
                 {errorAlert && <CustomAlert setErrorAlert={setErrorAlert} msg={msg} errorAlert={errorAlert} />}
                 {success && <CustomAlert setSuccess={setSuccess} success={success} msg={msg} />}
                 <QrReader
-                    facingMode={selected}
+                    facingMode={{ideal:selected}}
                     ref={qrRef}
                     delay={100}
                     style={{ with: '100%', border: 'none' }}

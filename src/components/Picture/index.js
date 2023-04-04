@@ -108,7 +108,7 @@ export const Picture = (props) => {
                     resultingPhoto &&
                     <div className=''>
                         <h4>Please, press and hold or right click to download the image</h4>
-                        <img className='image_taken' src={resultingPhoto} alt='image taken' />
+                        <img className='image_taken' src={resultingPhoto} alt='taken' />
                     </div>
                 }
             </div>
