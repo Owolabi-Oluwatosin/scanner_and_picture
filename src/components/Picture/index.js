@@ -35,7 +35,7 @@ export const Picture = (props) => {
             .getUserMedia({
                 video: {
                     facingMode: {
-                        selected
+                        ideal:selected
                     },
                     width: 1920,
                     height: 1080
